@@ -1,19 +1,19 @@
 # gitcommands
 using git commands
-git server: 10.110.20.135
+git server: 10.110.20.136
 
 ##########generate public key and send to administrator#######
-ssh-keygen -t rsa -C "rashid.khitilov@gilanholding.com"
+ssh-keygen -t rsa -C "rashid.khitilov@gmail.com"
 
 edit config file
-Host 10.110.20.135
+Host 10.110.20.136
 	User git
-	Hostname 10.110.20.135
-	IdentityFile ~/.ssh/id_rsa_gilan
+	Hostname 10.110.20.136
+	IdentityFile ~/.ssh/id_rsa_gn
 ##########generate public key and send to administrator#######
 
 ##########copy project to your local folder, . is important#######
-git clone rashid@10.110.20.135:spm.git .
+git clone rashid@10.110.20.136:spm.git .
 git checkout production
 ##########create new branch and make it active#######
 
@@ -26,7 +26,7 @@ git checkout rashid //go to rashid branch
 
 ##########name for commit log#######
 git config --local user.name "Rashid Khitilov"
-git config --local user.email rashid.khitilov@gilanholding.com
+git config --local user.email rashid.khitilov@gmail.com
 ##########name for commit log#######
 
 ##########commit changes to local branch#######
@@ -36,7 +36,7 @@ git commit -m "message"
 
 
 ##########create new reference to git server repository#######
-git remote add r_spm rashid@10.110.20.135:spm.git
+git remote add r_spm rashid@10.110.20.136:spm.git
 ##########create new reference to git server repository#######
 
 
@@ -62,6 +62,6 @@ git checkout [commit hash]
 git pull r_spm production 
 git push r_spm production
 
-git remote add r_spm rashid@10.110.20.135:checklist.git
+git remote add r_spm rashid@10.110.20.136:checklist.git
 
-git clone rashid@10.110.20.135:checklist.git .
+git clone rashid@10.110.20.136:checklist.git .
